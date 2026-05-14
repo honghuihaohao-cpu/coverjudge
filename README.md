@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CoverJudge — AI 封面裁判
 
-## Getting Started
+上传 2-4 张候选封面，AI 模拟真实用户在推荐流中 0.3 秒的注意力分配，预测每张封面的点击率。分 B 站、抖音、视频号三个平台独立评分。
 
-First, run the development server:
+## 快速开始
 
 ```bash
+git clone https://github.com/honghuihaohao-cpu/coverjudge.git
+cd coverjudge
+npm install
+echo 'ANTHROPIC_API_KEY="sk-ant-..."' > .env
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 http://localhost:3000，上传封面对比。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 功能
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 拖拽上传 2-4 张候选封面
+- Claude Vision API 分析封面 CTR 潜力
+- B 站 / 抖音 / 视频号三平台独立评分
+- 柱状图 + 雷达图可视化对比
+- 每张封面的优点/缺点分析
 
-## Learn More
+## 协议
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
